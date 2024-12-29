@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:translator/tanzid/translator_using_flutter_package.dart';
 
 import 'custom_button.dart';
 
@@ -32,7 +33,14 @@ class Homepage extends StatelessWidget {
             CustomButton(
               text: 'Tanzid',
               colors: const [Colors.lightGreen, Colors.blueGrey],
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TranslatorUsingFlutterPackage(),
+                  ),
+                );
+              },
             ),
           ],
         ),
